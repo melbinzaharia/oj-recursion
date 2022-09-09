@@ -1,0 +1,30 @@
+import java.util.*;
+class Main{
+   public static void main(String[] args){
+       Scanner in =new Scanner(System.in) ;
+      int n=in.nextInt();
+      for(int i=0;i<n;i++){
+           int sum=in.nextInt();
+            int sum1=0;
+            int c=check(sum,sum1);
+       
+      System.out.println(c);
+       
+      }
+       
+       
+    }
+    public static int check(int sum,int sum1){
+        if(sum1==sum){
+            // System.out.println(sum1);
+            return 1;
+        }
+        if(sum1>sum){
+            // System.out.println(sum1);
+            return 0;
+        }
+        // System.out.println(sum1);
+        return check(sum,sum1+4)+check(sum,sum1+8);
+        // (12,4)+sum
+    }
+}
