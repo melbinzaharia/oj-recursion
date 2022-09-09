@@ -1,0 +1,25 @@
+import java.util.*;
+class Main{
+   public static void main(String[] args){
+      Scanner in =new Scanner(System.in) ;
+      int n=in.nextInt();
+      String s=in.next();
+      String ans="";
+      check(n,s,0,ans);
+    }
+    
+    public static void check(int n,String s,int i,String ans){
+        if(i==n){
+            return;
+        }
+     
+          char ch=s.charAt(i);
+           String temp=ans+ch;
+           System.out.println(temp);
+           
+           check( n,s,i+1,temp);
+           check(n, s,i+1,ans);
+       
+       
+    }
+}
